@@ -12,6 +12,7 @@ n for append or insert new name into unsorted-names-list.txt
 p for printout name as sortlist. noted for print out source from "unsorted-names-list.txt". either will not print without source file.
 
 example:
+
 TestKST n Orson Milka Iddins 
 
 TestKST n Erna Dorey Battelle 
