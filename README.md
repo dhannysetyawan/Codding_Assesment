@@ -7,7 +7,7 @@ Command:
 n for append or insert new name into unsorted-names-list.txt
 p for printout name as sortlist. noted for print out source from "unsorted-names-list.txt". either will not print without source file.
 
-example
+example:
 TestKST n Orson Milka Iddins 
 TestKST n Erna Dorey Battelle 
 TestKST n Flori Chaunce Franzel 
@@ -22,4 +22,4 @@ TestKST n Leonerd Adda Micheli Monaghan
 TestKST n Avie Annakin 
 
 for printout and also produce the sorted-names-list.txt
-!screenshot()
+![screenshot](https://github.com/dhannysetyawan/Codding_Assesment/blob/master/Assesment.png)
