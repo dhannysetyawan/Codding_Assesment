@@ -1,6 +1,6 @@
 # Codding_Assesment
 
-Requirement: Net Frameworks 3.5
+Requirement: Net Frameworks 2.0
 
 Build it, navigate to directory build release or debug & execute with following commmands
 
