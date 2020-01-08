@@ -1,0 +1,21 @@
+name: .NET Core
+
+on: 
+  push:
+    paths:
+      - 'Program.cs'
+      - 'Names.cs'
+
+jobs:
+  build:
+
+    runs-on: [ubuntu-16.04, ubuntu-18.04]
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 2.2.108
+    - name: Build Sting.Application
+      run: dotnet build --configuration Release src/Sting.Measurements/Sting.Application
