@@ -3,7 +3,7 @@ name: Build TestKST
 on: 
   push:
     paths:
-      - 'src/**'
+      - 'src/*'
 
 jobs:
   build-TestKST:
