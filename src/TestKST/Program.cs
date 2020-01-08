@@ -25,7 +25,7 @@ namespace TestKST
             }
             if (args[0].ToUpper() == "N")
             {
-                int lenght = args.Length; // remove first arg
+                int lenght = args.Length; 
                 string candidate_name = string.Empty;
                 for (int i = 1; i < lenght; i++) {
                     candidate_name += args[i];

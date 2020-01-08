@@ -16,17 +16,16 @@ namespace TestKST
         //! main directory exe
         string current_path;
 
-        //! standard constructor
+        //! constructor
         public Names() {
             //! init the current path
             current_path = System.IO.Path.GetDirectoryName(System.Reflection.Assembly.GetExecutingAssembly().Location);
-            //! if unsorted-names-list.txt  Available will goes well
+            //! if unsorted-names-list.txt  exists will goes well
             if (!Check_available_Unsorted_file()) 
             {
                 try {
                     using (System.IO.StreamWriter _writer = System.IO.File.CreateText(System.IO.Path.Combine(current_path, file_unsorted_names_list_txt)))
                     {
-                        _writer.Flush();
                         _writer.Close();
                     }
                 }
@@ -37,8 +36,8 @@ namespace TestKST
                 }
             }
         }
-        //! deconstructor
-        ~ Names(){
+        //! destructor
+        ~Names(){
         }
 
         //! append new name into file
@@ -63,6 +62,7 @@ namespace TestKST
 
         }
 
+		//! check unsorted-names-list purpose for creating
         private bool Check_available_Unsorted_file()
         {
             if(!System.IO.File.Exists(System.IO.Path.Combine(current_path, file_unsorted_names_list_txt)))
@@ -78,9 +78,10 @@ namespace TestKST
             System.Collections.IEnumerator _list = m_names.GetEnumerator();
             while (_list.MoveNext())
             {
-                //! Print into file
+                //! Print into screen
                 Console.WriteLine(string.Format("{0}", _list.Current));
             }
+			//! update sort list name
             save_sorted_file();
 
         }
@@ -130,7 +131,6 @@ namespace TestKST
             }
 
         }
-
 
     }
 }
