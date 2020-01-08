@@ -1,21 +1,21 @@
-name: .NET Core
+name: Build TestKST
 
 on: 
   push:
     paths:
-      - 'Program.cs'
-      - 'Names.cs'
+      - 'src/**'
 
 jobs:
-  build:
+  build-TestKST:
+    name: Build TestKST
 
-    runs-on: [ubuntu-16.04, ubuntu-18.04]
+    runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@v1
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 2.2.108
-    - name: Build Sting.Application
-      run: dotnet build --configuration Release src/Sting.Measurements/Sting.Application
+        dotnet-version: 3.0.100-preview9-014004
+    - name: Build TestKST
+      run: dotnet build --configuration Release src/TestKST
